@@ -1,18 +1,12 @@
 package com.hackerrank;
 
-import com.sun.deploy.util.ReflectionUtil;
-import com.sun.deploy.util.SystemUtils;
-import sun.reflect.Reflection;
-
 import java.io.*;
 import java.lang.reflect.*;
-import java.util.*;
-import java.util.regex.*;
 import java.security.*;
 
 
 
-public class Solution {
+public class CanYouAccess {
 
     public static void main(String[] args) throws Exception {
         Do_Not_Terminate.forbidExit();
@@ -20,9 +14,9 @@ public class Solution {
         try{
             BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
             int num=Integer.parseInt(br.readLine().trim());
-            Object o;// Must be used to hold the reference of the instance of the class Solution.Inner.Private
+            Object o;// Must be used to hold the reference of the instance of the class CanYouAccess.Inner.Private
 
-            o = new Solution.Inner().new Private();
+            o = new CanYouAccess.Inner().new Private();
 
             Method m = Inner.Private.class.getDeclaredMethod("powerof2", int.class);
             //m.invoke(d);// throws java.lang.IllegalAccessException
@@ -48,7 +42,7 @@ public class Solution {
         }
     }//end of Inner
 
-}//end of Solution
+}//end of CanYouAccess
 
 class Do_Not_Terminate {
 
