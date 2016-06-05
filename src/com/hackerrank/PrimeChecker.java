@@ -4,18 +4,22 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.lang.reflect.Method;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
+import static java.lang.System.in;
 
 class Prime {
-    static {
-        java.io.InputStream in = System.in;
-    }
+
     public void checkPrime(int... numbers) {
         String result = "";
         for (int number : numbers) {
             if (isPrime(number)) {
-                result = result + " " + number;
+                if (Objects.equals(result, "")) {
+                    result = String.valueOf(number);
+                } else {
+                    result = result + " " + number;
+                }
             }
         }
 
@@ -36,7 +40,7 @@ class Prime {
 }
 
 public class PrimeChecker {
-    private static java.io.InputStream in = System.in;
+    //private static java.io.InputStream in = System.in;
     public static void main(String[] args) {
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(in));
