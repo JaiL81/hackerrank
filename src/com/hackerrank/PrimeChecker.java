@@ -11,7 +11,7 @@ import static java.lang.System.in;
 
 class Prime {
 
-    public void checkPrime(int... numbers) {
+    void checkPrime(int... numbers) {
         String result = "";
         for (int number : numbers) {
             if (isPrime(number)) {
@@ -27,7 +27,7 @@ class Prime {
     }
 
     //checks whether an int is prime or not.
-    boolean isPrime(int n) {
+    private boolean isPrime(int n) {
         if (n == 1) return false;
         if (n % 2 == 0 && n != 2) return false;
         //if not, then just check the odds
@@ -57,12 +57,12 @@ public class PrimeChecker {
             Method[] methods = Prime.class.getDeclaredMethods();
             Set<String> set = new HashSet<>();
             boolean overload = false;
-            for (int i = 0; i < methods.length; i++) {
-                if (set.contains(methods[i].getName())) {
+            for (Method method : methods) {
+                if (set.contains(method.getName())) {
                     overload = true;
                     break;
                 }
-                set.add(methods[i].getName());
+                set.add(method.getName());
 
             }
             if (overload) {
