@@ -1,4 +1,4 @@
-package com.hackerrank;
+package com.hackerrank.thirty.days.of.code.two;
 
 import java.io.*;
 import java.util.*;

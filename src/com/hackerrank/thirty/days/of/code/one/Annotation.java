@@ -1,4 +1,4 @@
-package com.hackerrank;
+package com.hackerrank.thirty.days.of.code.one;
 
 import java.lang.annotation.*;
 import java.lang.reflect.*;
