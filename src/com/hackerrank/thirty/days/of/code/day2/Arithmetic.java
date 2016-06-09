@@ -1,10 +1,4 @@
-package com.hackerrank.thirty.days.of.code.two;
-
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+package com.hackerrank.thirty.days.of.code.day2;
 
 public class Arithmetic {
 

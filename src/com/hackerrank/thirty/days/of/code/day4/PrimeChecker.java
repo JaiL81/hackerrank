@@ -1,4 +1,4 @@
-package com.hackerrank.thirty.days.of.code.four;
+package com.hackerrank.thirty.days.of.code.day4;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
