@@ -1,8 +1,6 @@
 package com.hackerrank.thirty.days.of.code.day12;
 
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.stream.IntStream;
+import java.util.*;
 
 class Person {
     private String firstName;
@@ -26,26 +24,26 @@ class Person {
 }
 
 class Student extends Person {
-    private IntStream testScores;
+    private int[] testScores;
 
     Student(String firstName, String lastName, int identification, int[] testScores) {
         super(firstName, lastName, identification);
-        this.testScores = Arrays.stream(testScores);
+        this.testScores = testScores;
 
     }
 
     char calculate() {
-        double average = this.testScores.average().getAsDouble();
+        double average = Arrays.stream(this.testScores).average().getAsDouble();
 
-        if (average >= 90 || average <= 100) {
+        if (average >= 90 && average <= 100) {
             return 'O';
-        } else if (average >= 80 || average < 90) {
+        } else if (average >= 80 && average < 90) {
             return 'E';
-        } else if (average >= 70 || average < 80) {
+        } else if (average >= 70 && average < 80) {
             return 'A';
-        } else if (average >= 60 || average < 70) {
+        } else if (average >= 55 && average < 70) {
             return 'P';
-        } else if (average >= 50 || average < 60) {
+        } else if (average >= 40 && average < 55) {
             return 'D';
         } else {
             return 'T';
